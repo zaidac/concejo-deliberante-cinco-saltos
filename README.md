@@ -6,13 +6,13 @@ transparencia y contacto ciudadano.
 
 ## Stack tecnológico
 
-HTML5 semántico, CSS y JavaScript vanilla (ES Modules), **sin frameworks ni dependencias**.
+HTML5 semántico, CSS y JavaScript vanilla, **sin frameworks ni dependencias**.
 
 | Decisión | Motivo |
 | --- | --- |
 | Sin frameworks | Sitio estático e informativo: cero dependencias, despliegue inmediato y superficie mínima de mantenimiento. |
 | CSS con Custom Properties (BEM + ITCSS) | Sistema de diseño tematizable y escalable a futuras páginas o secciones. |
-| JS en módulos (`main.js` → `ui.js` + `form-handler.js`) | Separación de responsabilidades: interfaz por un lado, formulario por otro. |
+| JS en un solo archivo clásico (`assets/js/main.js`) | Sin `import`/módulos a propósito: funciona igual servido por HTTP o abriendo el HTML con doble clic (`file://`). UI y formulario separados en secciones internas. |
 | Formspree para el formulario | Recibe consultas sin operar servidores ni bases de datos propias. |
 
 ## Estructura del proyecto
@@ -24,7 +24,7 @@ HTML5 semántico, CSS y JavaScript vanilla (ES Modules), **sin frameworks ni dep
 ├── robots.txt / sitemap.xml
 └── assets/
     ├── css/                # variables · reset · components · layout · main
-    ├── js/                 # main · ui · form-handler (ES Modules)
+    ├── js/                 # main.js (clásico, con secciones UI + formulario)
     └── img/                # logo.jpg · favicon.svg
 ```
 
@@ -37,8 +37,8 @@ python -m http.server 8000
 # abrir http://localhost:8000
 ```
 
-> Abrir `index.html` directamente también funciona, excepto el envío del formulario
-> (requiere HTTP para `fetch`) y los módulos ES en algunos navegadores.
+> Abrir `index.html` con doble clic también funciona (menú, FAQ y validación
+> incluidos); solo el envío del formulario requiere HTTP por el `fetch` a Formspree.
 
 ## Configuración pendiente
 
