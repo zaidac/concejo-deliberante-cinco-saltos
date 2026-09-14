@@ -48,8 +48,8 @@ python -m http.server 8000
    envío no está configurado en lugar de fallar en silencio.
 2. **Dominio definitivo**: reemplazar `TU-DOMINIO-FINAL.gob.ar` en los `canonical`
    de las tres páginas, `robots.txt` y `sitemap.xml` (marcados con `TODO`).
-3. **Contenido oficial**: autoridades y bloques, horarios de sesión y composición
-   real del cuerpo (algunas secciones lo indican como *placeholder*).
+3. **Contenido oficial**: bloques y fotos de las autoridades, y horarios de sesión
+   (las secciones que aún usan datos ilustrativos lo indican como *placeholder*).
 
 ## Despliegue
 
