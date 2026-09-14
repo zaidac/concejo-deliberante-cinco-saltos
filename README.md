@@ -25,7 +25,7 @@ HTML5 semántico, CSS y JavaScript vanilla, **sin frameworks ni dependencias**.
 └── assets/
     ├── css/                # variables · reset · components · layout · main
     ├── js/                 # main.js (clásico, con secciones UI + formulario)
-    └── img/                # logo.jpg · favicon.svg
+    └── img/                # logo.png · favicon.ico/.png · apple-touch-icon.png
 ```
 
 ## Vista previa local
