@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: reemplazar TU-DOMINIO-FINAL.gob.ar por el dominio definitivo del sitio
+Sitemap: https://TU-DOMINIO-FINAL.gob.ar/sitemap.xml
