@@ -3,10 +3,10 @@
    Importa todos los módulos CSS en orden
    ======================================== */
 
-@import './variables.css';
-@import './reset.css';
-@import './components.css';
-@import './layout.css';
+@import './variables.css?v=20260915';
+@import './reset.css?v=20260915';
+@import './components.css?v=20260915';
+@import './layout.css?v=20260915';
 
 /* ========================================
    ESTILOS ESPECÍFICOS DE PÁGINA
