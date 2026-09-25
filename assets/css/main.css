@@ -1,12 +1,12 @@
 /* ========================================
    MAIN CSS - Consejo Deliberante Cinco Saltos
-   Importa todos los módulos CSS en orden
+   Estilos específicos de página.
+   Los módulos (variables, reset, components, layout)
+   se enlazan directo en el HTML para no depender
+   de @import (frágil en GitHub Pages / caché).
+   Orden de cascada en el HTML:
+   variables -> reset -> components -> layout -> main
    ======================================== */
-
-@import './variables.css?v=20260915';
-@import './reset.css?v=20260915';
-@import './components.css?v=20260915';
-@import './layout.css?v=20260915';
 
 /* ========================================
    ESTILOS ESPECÍFICOS DE PÁGINA

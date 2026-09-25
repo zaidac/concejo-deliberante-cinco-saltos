@@ -18,7 +18,7 @@ HTML5 semántico, CSS y JavaScript vanilla, **sin frameworks ni dependencias**.
 ## Estructura del proyecto
 
 ```
-├── index.html              # Página principal (hero, institución, autoridades, transparencia, contacto)
+├── index.html              # Página principal (hero, institución, autoridades, comisiones, transparencia, contacto)
 ├── aviso-legal.html        # Aviso legal
 ├── privacidad.html         # Política de privacidad
 ├── robots.txt / sitemap.xml
@@ -48,13 +48,24 @@ python -m http.server 8000
    envío no está configurado en lugar de fallar en silencio.
 2. **Dominio definitivo**: reemplazar `TU-DOMINIO-FINAL.gob.ar` en los `canonical`
    de las tres páginas, `robots.txt` y `sitemap.xml` (marcados con `TODO`).
-3. **Contenido oficial**: bloques y fotos de las autoridades, y horarios de sesión
+3. **Contenido oficial**: fotos de las autoridades y horarios de sesión
    (las secciones que aún usan datos ilustrativos lo indican como *placeholder*).
+
+## Arquitectura CSS
+
+Los 5 módulos se enlazan **directo en el HTML**, en este orden de cascada
+(variables → reset → components → layout → main). A propósito **no se usa
+`@import` ni query strings `?v=` en CSS**: la cadena de imports es frágil en
+GitHub Pages/caché y, si un import falla, se cae todo el sistema de diseño
+(variables incluidas) y el sitio queda sin estilos.
 
 ## Despliegue
 
 Sitio 100 % estático: compatible con GitHub Pages, Netlify, Vercel o cualquier
 hosting tradicional. Basta con publicar el contenido de esta carpeta.
+
+> Tras cambiar CSS ya publicado, ver el sitio con recarga forzada
+> (Ctrl+Shift+R): Pages y el navegador cachean las hojas de estilo.
 
 ## Accesibilidad y SEO
 

@@ -838,13 +838,6 @@
   margin-top: var(--space-4);
 }
 
-.commission-card__body p {
-  margin: 0 0 var(--space-3);
-  font-size: var(--text-sm);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-muted);
-}
-
 .commission-members {
   list-style: none;
   padding: 0;
