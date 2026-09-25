@@ -489,6 +489,11 @@
   color: var(--color-warning);
 }
 
+.badge--info {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
 .badge--error {
   background: var(--color-error-light);
   color: var(--color-error);
@@ -712,4 +717,161 @@
 .skip-link:focus {
   top: var(--space-4);
   transform: translateY(0);
+}
+
+/* ----------------------------------------
+   AUTHORITY CARD EXTENSIONS
+   ---------------------------------------- */
+.authority-card__block,
+.authority-card__period {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin: var(--space-1) 0 0;
+}
+
+.authority-card__block .placeholder,
+.authority-card__period .placeholder {
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* ----------------------------------------
+   COMMISSION CARDS
+   ---------------------------------------- */
+.commissions {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .commissions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .commissions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.commission-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.commission-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gray-300);
+}
+
+.dark .commission-card:hover {
+  border-color: var(--gray-700);
+}
+
+.commission-card__header {
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--gray-50);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.dark .commission-card__header {
+  background: var(--gray-800);
+}
+
+.commission-card__header .badge {
+  align-self: flex-start;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.commission-card__name {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  line-height: var(--leading-tight);
+  margin: 0;
+}
+
+.commission-card__body {
+  padding: var(--space-5) var(--space-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.commission-card__body h4 {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+.commission-card__body h4:first-child {
+  margin-top: 0;
+}
+
+.commission-card__body p {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.commission-card__body .commission-members {
+  margin-top: var(--space-4);
+}
+
+.commission-card__body p {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+
+.commission-members {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.commission-members li {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+  padding: var(--space-2) var(--space-3);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.dark .commission-members li {
+  background: var(--gray-800);
+}
+
+.commission-members strong {
+  color: var(--color-primary);
+}
+
+.text-center {
+  text-align: center;
 }
